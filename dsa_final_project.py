@@ -103,3 +103,9 @@ while Program:
 
     else:
         print("Invalid number, please try again")
+
+    # saves the input in a txt file
+
+    txtFile = open("grocery_list.txt", "w")
+    theList = "\n".join(myList)
+    txtFile.writelines(theList)

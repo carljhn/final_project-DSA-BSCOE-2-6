@@ -1,1 +1,6 @@
-milk
+mango
+banana
+apple
+grapes
+oranges
+oranges
