@@ -12,7 +12,7 @@ from prettytable import PrettyTable
 print("="*20, "My Grocery List", "="*20)
 
 # options
-features = "\n\nWelcome to you Grocery List! \nA: Add item to your list. \nB. Delete an item to your list. \nC. Update an item to your list. \nD. Count the number of items in your list. \nE. Exit the program. \nCheck your list"
+features = "\n\nWelcome to you Grocery List! \nA: Add item to your list. \nB. Delete an item to your list. \nC. Update an item to your list. \nD. Count the number of items in your list. \nE. Exit the program. \nF. Check your list"
 print(features)
 
 myList = []
@@ -75,7 +75,7 @@ while Program:
                 print("Something went wrong.")
 
     elif user_input == "d":
-        itemName = input("Enter the item in the list that you want to count: ")
+        itemName = input("Enter the item in the list that you want to count: ").lower()
         if itemName in myList:
             counter = myList.count(itemName)
             print("="*57)
@@ -90,7 +90,9 @@ while Program:
             if exit == "y":
                 program = False
                 print("\nThank you for using this program!")
-                break
+    
+    elif user_input == "f":
+        my_list()
 
     else:
         print("Invalid number, please try again")
