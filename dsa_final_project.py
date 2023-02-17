@@ -6,22 +6,29 @@
 # Push your code changes in github.
 # Final checking Feb 18. Recorded demo.
 
+#import the required module
+from prettytable import PrettyTable
+
 print("="*20, "My Grocery List", "="*20)
 
+# options
+features = "\n\nWelcome to you Grocery List! \nA: Add item to your list. \nB. Delete an item to your list. \nC. Update an item to your list. \nD. Count the number of items in your list. \nE. Exit the program. \nCheck your list"
+print(features)
+
 myList = []
-ready = input("Press 'y' if you are ready and 'n' if not: ")
-if ready == "y":
+
+x = PrettyTable()
+# function for the table
+def my_list():
+    x.field_names = ["My Items"]
+    for i in myList:
+        x.add_row([i])
+
+    print(x.get_string(title="MY GROCERY LIST"))
+    x.clear_rows()
 
     Program = True
     while Program:
-        print("="*57)
-        print("\nWelcome to you Grocery List!")
-        print("A: Add item to your list.")
-        print("B. Delete an item to your list.")
-        print("C. Update an item to your list.")
-        print("D. Count the number of items in your list.")
-        print("E. Exit the program.")
-
         user_input = input("\nWhat do you want to do? Please enter the corresponding letter of the options: ").lower()
 
         if user_input == "a":
