@@ -93,6 +93,7 @@ while Program:
             if exit == "y":
                 program = False
                 print("\nThank you for using this program!")
+                break
     
     # option F
     elif user_input == "f":

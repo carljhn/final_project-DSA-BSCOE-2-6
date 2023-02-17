@@ -1,6 +1,2 @@
-mango
-banana
-apple
-grapes
-oranges
-oranges
+mom
+dof
