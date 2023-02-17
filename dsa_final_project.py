@@ -58,18 +58,21 @@ while Program:
                 print("Something went wrong.")
 
     elif user_input == "c":
-        itemName = input("Enter your chosen item here: ")
-        if itemName in myList:
-            new_item = input("What item do you want to modify?: ")
-            index = myList.index(itemName)
-            myList[index] = new_item
-            print("="*57)
-            print("List updated!")
-            for items in myList:
-                print("-", items)
-        else:
-            print("="*57)
-            print("Item not found.")
+        while True:
+            itemName = input("\nPlease enter the item you want to update: ").lower()
+            try:
+                if itemName in myList:
+                    confirm = input(f"\nAre you sure you want to update {itemName} from the list? (y/n): ").lower()
+                    if confirm == "y":
+                        updateItem = input(f"\nPlease enter the item that you want to change {itemName} with: ").lower()
+                        index = myList.index(itemName)
+                        myList[index] = updateItem
+                        print("="*57)
+                        print("\nList updated!")
+                        my_list()
+                        break
+            except Exception:
+                print("Something went wrong.")
 
     elif user_input == "d":
         itemName = input("Enter the item in the list that you want to count: ")
