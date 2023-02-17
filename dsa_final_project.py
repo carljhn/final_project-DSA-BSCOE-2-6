@@ -43,3 +43,17 @@ if ready == "y":
             else:
                 print("="*57)
                 print("Item not found.")
+
+        elif user_input == "c":
+            itemName = input("Enter your chosen item here: ")
+            if itemName in myList:
+                new_item = input("What item do you want to modify?: ")
+                index = myList.index(itemName)
+                myList[index] = new_item
+                print("="*57)
+                print("List updated!")
+                for items in myList:
+                    print("-", items)
+            else:
+                print("="*57)
+                print("Item not found.")
