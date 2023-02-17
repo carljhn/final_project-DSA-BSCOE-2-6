@@ -38,17 +38,24 @@ while Program:
         print("An item has been added")
         myList.append(new_item)
 
+    # option B
     elif user_input == "b":
-        itemName = input("Enter the item you want to remove: ")
-        if itemName in myList:
-            myList.remove(itemName)
-            print("="*57)
-            print("An item has been deleted")
-            for items in myList:
-                print("-", items)
-        else:
-            print("="*57)
-            print("Item not found.")
+        while True:
+            itemName = input("Enter the item you want to remove: ").lower()
+            try:
+                if itemName in myList:
+                    confirm = input(f"Are you sure you want to delete {itemName} from the list? (y/n): ").lower()
+                    if confirm == "y":
+                        myList.remove(itemName)
+                        print("="*57)
+                        print("\nList updated!")
+                        my_list()
+                        break
+                else:
+                    print("Item not found.")
+            
+            except Exception:
+                print("Something went wrong.")
 
     elif user_input == "c":
         itemName = input("Enter your chosen item here: ")
