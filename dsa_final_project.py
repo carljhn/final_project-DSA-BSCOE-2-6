@@ -57,3 +57,14 @@ if ready == "y":
             else:
                 print("="*57)
                 print("Item not found.")
+
+        elif user_input == "d":
+            itemName = input("Enter the item in the list that you want to count: ")
+            if itemName in myList:
+                counter = myList.count(itemName)
+                print("="*57)
+                print("The number of item is:")
+                print(counter)
+            else:
+                print("="*57)
+                print("Item not found.")
