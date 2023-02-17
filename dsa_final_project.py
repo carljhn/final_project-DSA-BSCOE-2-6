@@ -75,3 +75,6 @@ if ready == "y":
                     program = False
                     print("\nThank you for using this program!")
                     break
+
+        else:
+            print("Invalid number, please try again")
