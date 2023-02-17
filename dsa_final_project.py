@@ -10,3 +10,14 @@ print("="*20, "My Grocery List", "="*20)
 
 myList = []
 ready = input("Press 'y' if you are ready and 'n' if not: ")
+if ready == "y":
+
+    Program = True
+    while Program:
+        print("="*57)
+        print("\nWelcome to you Grocery List!")
+        print("A: Add item to your list.")
+        print("B. Delete an item to your list.")
+        print("C. Update an item to your list.")
+        print("D. Count the number of items in your list.")
+        print("E. Exit the program.")
