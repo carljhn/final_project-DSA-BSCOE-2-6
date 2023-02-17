@@ -23,3 +23,11 @@ if ready == "y":
         print("E. Exit the program.")
 
         user_input = input("\nWhat do you want to do? Please enter the corresponding letter of the options: ").lower()
+
+        if user_input == "a":
+            new_item = input("What item do you want to add?: ")
+            myList.append(new_item)
+            print("="*57)
+            print("An item has been added")
+            for items in myList:
+                 print("-", items)
