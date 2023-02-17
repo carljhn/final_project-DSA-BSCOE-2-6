@@ -31,3 +31,15 @@ if ready == "y":
             print("An item has been added")
             for items in myList:
                  print("-", items)
+
+        elif user_input == "b":
+            itemName = input("Enter the item you want to remove: ")
+            if itemName in myList:
+                myList.remove(itemName)
+                print("="*57)
+                print("An item has been deleted")
+                for items in myList:
+                    print("-", items)
+            else:
+                print("="*57)
+                print("Item not found.")
