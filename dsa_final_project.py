@@ -68,3 +68,10 @@ if ready == "y":
             else:
                 print("="*57)
                 print("Item not found.")
+
+        elif user_input == "e":
+                exit = input("\nAre you sure you want to exit the program?(y/n): ").lower()
+                if exit == "y":
+                    program = False
+                    print("\nThank you for using this program!")
+                    break
