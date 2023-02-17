@@ -7,3 +7,6 @@
 # Final checking Feb 18. Recorded demo.
 
 print("="*20, "My Grocery List", "="*20)
+
+myList = []
+ready = input("Press 'y' if you are ready and 'n' if not: ")
