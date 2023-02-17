@@ -57,6 +57,7 @@ while Program:
             except Exception:
                 print("Something went wrong.")
 
+    # option C
     elif user_input == "c":
         while True:
             itemName = input("\nPlease enter the item you want to update: ").lower()
@@ -74,6 +75,7 @@ while Program:
             except Exception:
                 print("Something went wrong.")
 
+    # option D
     elif user_input == "d":
         itemName = input("Enter the item in the list that you want to count: ").lower()
         if itemName in myList:
@@ -85,14 +87,19 @@ while Program:
             print("="*57)
             print("Item not found.")
 
+    # option E
     elif user_input == "e":
             exit = input("\nAre you sure you want to exit the program?(y/n): ").lower()
             if exit == "y":
                 program = False
                 print("\nThank you for using this program!")
     
+    # option F
     elif user_input == "f":
         my_list()
+    
+    elif user_input == "" or user_input == " ":
+        print("Please enter something")
 
     else:
         print("Invalid number, please try again")
