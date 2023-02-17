@@ -21,3 +21,5 @@ if ready == "y":
         print("C. Update an item to your list.")
         print("D. Count the number of items in your list.")
         print("E. Exit the program.")
+
+        user_input = input("\nWhat do you want to do? Please enter the corresponding letter of the options: ").lower()
